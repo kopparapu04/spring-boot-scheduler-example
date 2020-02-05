@@ -18,7 +18,7 @@ pipeline {
           withEnv(["MAVEN_HOME=${tool mavenVersion}"]) {
             sh '$MAVEN_HOME/bin/mvn -version'
             echo 'Running build job...'
-            sh '$MAVEN_HOME/bin/mvn  -s clean install -DskipTests'
+            sh '$MAVEN_HOME/bin/mvn clean install -DskipTests'
           }
         }
       }
